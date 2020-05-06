@@ -19,7 +19,7 @@ class CC_Org_Site {
 	private static $instance;
 
 	const id        = __CLASS__;
-	const theme_ver = '2020.04.1';
+	const theme_ver = '2020.05.1';
 	private function __construct() {
 		$this->actions_manager();
 	}
@@ -44,8 +44,6 @@ class CC_Org_Site {
 	 * */
 	public function actions_manager() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-		add_action( 'enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		add_action( 'init', array( $this, 'init_functions' ) );
 	}
 	public function enqueue_styles() {
