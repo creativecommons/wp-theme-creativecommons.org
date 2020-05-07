@@ -44,10 +44,9 @@ class CC_Org_Site {
 	 * */
 	public function actions_manager() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
-		add_action( 'init', array( $this, 'init_functions' ) );
 	}
 	public function enqueue_styles() {
-		wp_enqueue_style( 'cc_parent_style', THEME_PARENT_URI . '/assets/styles.css', self::theme_ver );
+		wp_enqueue_style( 'cc_current_style', THEME_LOCAL_URI . '/assets/css/styles.css', self::theme_ver );
 	}
 }
 
