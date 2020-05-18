@@ -2,7 +2,7 @@
 class CC_Org_Filters {
   public static function get_main_menu() {
     $menu_locations = get_nav_menu_locations();
-    $main_menu = wp_get_nav_menu_object($menu_locations['main-navigation']);
+    $main_menu = wp_get_nav_menu_object($menu_locations['global-menu']);
     if ( !empty( $main_menu ) ) {
       return wp_get_nav_menu_items($main_menu);
     }
