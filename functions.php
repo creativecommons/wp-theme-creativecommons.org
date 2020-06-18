@@ -57,7 +57,7 @@ class CC_Org_Site {
 		add_filter( 'cc_theme_base_menus', array( $this, 'add_global_menu') );
 	}
 	public function enqueue_scripts() {
-		wp_enqueue_script( 'globalbar', 'https://creativecommons.lo/global-header.js', '', self::theme_ver, true );
+		wp_enqueue_script( 'vocabulary', THEME_LOCAL_URI . '/assets/js/vocabulary.js', '', self::theme_ver, true );
 	}
 	public function enqueue_styles() {
 		wp_enqueue_style( 'cc_current_style', THEME_LOCAL_URI . '/assets/css/styles.css', self::theme_ver );
