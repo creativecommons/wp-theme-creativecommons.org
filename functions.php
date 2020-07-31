@@ -2,7 +2,7 @@
 /**
  * Functions: list
  *
- * @version 2020.05.1
+ * @version 2020.07.1
  * @package wp-theme-creativecommons.org
  */
 
@@ -24,7 +24,7 @@ class CC_Org_Site {
 	private static $instance;
 
 	const id        = __CLASS__;
-	const theme_ver = '2020.05.1';
+	const theme_ver = '2020.07.1';
 	private function __construct() {
 		$this->actions_manager();
 	}
