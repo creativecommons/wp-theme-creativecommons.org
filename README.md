@@ -39,6 +39,18 @@ http -aUSERNAME:PASSWORD https://stage.creativecommons.org/wp-json/ccnavigation/
 (replace `USERNAME` and `PASSWORD` with appropriate values)
 
 
+### Related Documentation
+
+- WordPress Developer Resources
+  - [REST API Handbook][apihandbook]
+    - [Extending the REST API][extendingapi]
+    - [Using the REST API][usingapi]
+
+[apihandbook]: https://developer.wordpress.org/rest-api/
+[extendingapi]: https://developer.wordpress.org/rest-api/extending-the-rest-api/
+[usingapi]: https://developer.wordpress.org/rest-api/using-the-rest-api/
+
+
 ## License
 
 - [`LICENSE`](LICENSE) (Expat/[MIT][mit] License)
