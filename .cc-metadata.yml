@@ -1,0 +1,8 @@
+# Whether this GitHub repo is for a CC-led engineering project
+engineering_project: true
+# Name of the repository/project in English
+english_name: Creative Commons primary website WordPress Theme
+# All technologies used
+technologies: CSS, HTML, PHP, WordPress
+# Whether this repository should be featured on the CC Open Source site's "Projects" page
+featured: false
