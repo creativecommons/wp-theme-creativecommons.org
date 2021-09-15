@@ -23,6 +23,8 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## API Endpoints
 
+**Note:** enable permalinks within the WordPress settings (Settings -> Permalinks) for the following API URLs to work.
+
 The following endpoints are defined in [`inc/filters.php`][filtersphp]:
 1. `/wp-json/ccnavigation-header/menu`
 2. `/wp-json/ccnavigation-footer/menu`
