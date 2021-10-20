@@ -62,7 +62,6 @@ class CC_Org_Site {
 	public function enqueue_styles() {
 		wp_enqueue_style( 'cc_current_style', THEME_LOCAL_URI . '/assets/css/styles.css', self::theme_ver );
 	}
-
 }
 
 //This adds the CC colors as default color pallete
