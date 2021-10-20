@@ -62,10 +62,13 @@ class CC_Org_Site {
 	public function enqueue_styles() {
 		wp_enqueue_style( 'cc_current_style', THEME_LOCAL_URI . '/assets/css/styles.css', self::theme_ver );
 	}
+
 }
+
+//this line disables the default color picker
+add_theme_support('disable-custom-colors'); 
 
 /**
  * Instantiate the class object
  * */
-
 $_s = CC_Org_Site::get_instance();
