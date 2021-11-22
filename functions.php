@@ -7,6 +7,7 @@
  */
 
 /* Theme Constants (to speed up some common things) ------*/
+require(plugin_dir_path(__FILE__) . 'endpoints/menu/menu_endpoints.php');
 define( 'THEME_LOCAL_URI', get_stylesheet_directory_uri() );
 define( 'THEME_PARENT_URI', get_template_directory_uri() );
 
