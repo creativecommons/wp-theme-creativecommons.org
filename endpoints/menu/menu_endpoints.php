@@ -23,6 +23,13 @@ function get_menus()
             'walker'          => new Navwalker(),
         )
     );
+    $style_imports = array(
+        "@import url(https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css);",
+        //  TODO: Replace with appropriate creative commons url.
+        "@import url(http://localhost:8080/wp-content/themes/creativecommons-base/assets/css/styles.css); "
+    );
 
-    return $html_string . " <style> @import url(https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css); @import url(https://creativecommons.org/wp-content/themes/creativecommons-base/assets/css/styles.css?ver=5.8.1); </style> ";
+    $style_string = "<style>" . implode(" ", $style_imports)  . "</style>";
+
+    return $html_string .  $style_string;
 }
