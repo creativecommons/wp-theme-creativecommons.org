@@ -1,5 +1,15 @@
 <?php
 class CC_Org_Filters {
+  public static function add_html_content()
+  {
+    $style_imports = array(
+      "@import url(https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css);",
+      //  TODO: Replace with appropriate creative commons url.
+      "@import url(http://127.0.0.1:8000/wp-content/themes/creativecommons-base/assets/css/styles.css);"
+    );
+
+    return "<style>" . implode(" ", $style_imports)  . "</style>";
+  }
   public static function get_global_menu() {
     if ( false === ( $global_menu_items = get_transient( 'global_menu_items' ) ) ) {
       $menu_locations = get_nav_menu_locations();
@@ -12,6 +22,8 @@ class CC_Org_Filters {
     return $global_menu_items;
   }
   public static function get_header_menu() {
+    header('Content-Type: text/html');
+
     if ( false === ( $header_menu_items = get_transient( 'header_menu_items' ) ) ) {
       $menu_locations = get_nav_menu_locations();
       $header_menu = wp_get_nav_menu_object($menu_locations['main-navigation']);
@@ -20,9 +32,25 @@ class CC_Org_Filters {
         set_transient( 'header_menu_items', $header_menu_items, 1 * HOUR_IN_SECONDS );
       }
     }
-    return $header_menu_items;
+
+    $menu_html = wp_nav_menu(
+      array(
+        'menu'  => $header_menu_items,
+        'container'       => 'div',
+        'container_class' => 'navbar-menu',
+        'items_wrap'      => '<div id="%1$s" class="navbar-start">%3$s</div>',
+        'menu_class'      => 'navbar-menu',
+        'after'           => '</div>',
+        'walker'          => new Navwalker(),
+      )
+    );
+
+    $style_string = self::add_html_content();
+    return $menu_html . $style_string;
   }
   public static function get_footer_menu() {
+    header('Content-Type: text/html');
+
     if ( false === ( $footer_menu_items = get_transient( 'footer_menu_items' ) ) ) {
       $menu_locations = get_nav_menu_locations();
       $footer_menu = wp_get_nav_menu_object($menu_locations['footer-navigation']);
@@ -31,7 +59,20 @@ class CC_Org_Filters {
         set_transient( 'footer_menu_items', $footer_menu_items, 1 * HOUR_IN_SECONDS );
       }
     }
-    return $footer_menu_items;
+
+    $menu_html = wp_nav_menu(
+      array(
+        'menu'  => $footer_menu_items,
+        'container'       => 'div',
+        'container_class' => 'navbar-menu',
+        'items_wrap'      => '<div id="%1$s" class="navbar-start">%3$s</div>',
+        'menu_class'      => 'navbar-menu',
+        'after'           => '</div>',
+        'walker'          => new Navwalker(),
+      )
+      );
+      $style_string = self::add_html_content();
+    return $menu_html . $style_string;
   }
   public static function transient_queued_scripts() {
     delete_transient('cc_enqueued_scripts');
