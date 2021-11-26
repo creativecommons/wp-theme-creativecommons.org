@@ -54,9 +54,16 @@ class CC_Org_Site {
 	public function actions_manager() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 		add_filter( 'cc_theme_base_menus', array( $this, 'add_global_menu') );
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 	}
+
+	public function admin_enqueue_scripts() {
+		wp_enqueue_script( 'custom-block-settings', THEME_LOCAL_URI . '/custom-block-settings.js', '', self::theme_ver, true );
+	}
+
 	public function enqueue_styles() {
 		wp_enqueue_style( 'cc_current_style', THEME_LOCAL_URI . '/style.css', self::theme_ver );
+
 	}
 }
 
