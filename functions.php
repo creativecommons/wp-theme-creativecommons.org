@@ -56,7 +56,7 @@ class CC_Org_Site {
 		add_filter( 'cc_theme_base_menus', array( $this, 'add_global_menu') );
 	}
 	public function enqueue_styles() {
-		wp_enqueue_style( 'cc_custom_style', THEME_LOCAL_URI . '/style.css', self::theme_ver );
+		wp_enqueue_style( 'cc_current_style', THEME_LOCAL_URI . '/style.css', self::theme_ver );
 	}
 }
 
