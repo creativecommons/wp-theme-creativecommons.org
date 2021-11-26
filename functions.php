@@ -53,15 +53,10 @@ class CC_Org_Site {
 	 * */
 	public function actions_manager() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		add_filter( 'cc_theme_base_menus', array( $this, 'add_global_menu') );
 	}
-	public function enqueue_scripts() {
-		wp_enqueue_script( 'vocabulary', THEME_LOCAL_URI . '/assets/js/vocabulary.js', '', self::theme_ver, true );
-	}
 	public function enqueue_styles() {
-		wp_enqueue_style( 'cc_current_style', THEME_LOCAL_URI . '/assets/css/styles.css', self::theme_ver );
-		wp_enqueue_style( 'cc_custom_style', THEME_LOCAL_URI . '/style.css', self::theme_ver );
+		wp_enqueue_style( 'cc_current_style', THEME_LOCAL_URI . '/style.css', self::theme_ver );
 	}
 }
 
