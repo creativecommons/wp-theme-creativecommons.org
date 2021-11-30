@@ -10,3 +10,77 @@ License: GPL2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 This theme, like WordPress, is licensed under the GPL.
 */
+/* styles for single blog post*/
+.cc-category {
+	position: absolute;
+	left: 0;
+	top: -3.5rem;
+	background-color: #c74200;
+	padding: 1rem;
+	z-index: 4;
+}
+
+.cc-category a {
+	color: #ffffff;
+	font-weight: bolder;
+}
+
+.cc-post-heading {
+	position: absolute;
+	top: 45%;
+	left: 55%;
+	width: auto;
+	background-color: #ffffff;
+	z-index: 3;
+	padding: 3rem;
+}
+
+.cc-post-image {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 50rem;
+	z-index: 2;
+}
+
+.cc-post-parent {
+	position: relative;
+    width: 100%;
+	margin-top: 5rem;
+	z-index: 1;
+}
+
+@media (max-width: 1023px) {
+	.cc-category {
+		position: relative;
+		top: auto;
+		left: auto;
+        width: fit-content;
+		background-color: #c74200;
+		padding: 1rem;
+	}
+
+    .cc-post-heading {
+		position: relative;
+		top: auto;
+		left: auto;
+		background-color: transparent;
+		width: 100%;
+		display: block;
+		padding: 1rem;
+	}
+
+	.cc-post-image {
+		position: relative;
+		top: auto;
+		left: auto;
+		width: 100%;
+		display: block;
+	}
+
+    .cc-post-parent {
+		position: relative;
+		margin-top: 1rem;
+		width: 100%;
+	}
+}
