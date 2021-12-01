@@ -20,6 +20,24 @@ class CC_Org_Filters {
         set_transient( 'header_menu_items', $header_menu_items, 1 * HOUR_IN_SECONDS );
       }
     }
+    $child_items = [];
+        foreach ($header_menu_items as $key => $item) {
+          if ($item->menu_item_parent) {
+              array_push($child_items, $item);
+              unset($header_menu_items[$key]);
+          }
+        }
+        foreach ($header_menu_items as $item) {
+          foreach ($child_items as $key => $child) {
+              if ($child->menu_item_parent == $item->ID) {
+                  if (!$item->child_items) {
+                      $item->child_items = [];
+                  }
+                  array_push($item->child_items, $child);
+                  unset($child_items[$key]);
+              }
+          }
+        }
     return $header_menu_items;
   }
   public static function get_footer_menu() {
