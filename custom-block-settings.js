@@ -29,7 +29,6 @@ const addSpacingControlAttribute = ( settings, name ) => {
             }
         }
     } );
-    console.log(settings);
     return settings;
 };
 
