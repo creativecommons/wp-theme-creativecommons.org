@@ -13,14 +13,14 @@ const enableSpacingControlOnBlocks = [
  *
  * @returns {object} Modified block settings.
  */
- const addSpacingControlAttribute = ( settings, name ) => {
+const addSpacingControlAttribute = ( settings, name ) => {
     // Do nothing if it's another block than our defined ones.
     if ( ! enableSpacingControlOnBlocks.includes( name ) ) {
         return settings;
     }
 
-    // Use Lodash's assign to gracefully handle if attributes are undefined
-    settings = lodash.assign( settings, {
+    // Use Lodash's merge to gracefully handle if attributes are undefined
+    settings = lodash.merge( settings, {
         supports: {
             spacing: {
                 blockGap: true,
