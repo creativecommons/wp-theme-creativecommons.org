@@ -23,16 +23,11 @@
       "no-api": true,
       "type": "vcs",
       "url": "https://github.com/creativecommons/creativecommons-base"
-    },
-    {
-      "no-api": true,
-      "type": "vcs",
-      "url": "https://github.com/creativecommons/queulat"
     }
   ],
   "require": {
     "composer/installers": "~1.0",
-    "creativecommons/creativecommons-base": "2020.07.1"
+    "creativecommons/creativecommons-base": "2022.02.1"
   },
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
