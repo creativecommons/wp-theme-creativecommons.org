@@ -23,11 +23,6 @@
       "no-api": true,
       "type": "vcs",
       "url": "https://github.com/creativecommons/creativecommons-base"
-    },
-    {
-      "no-api": true,
-      "type": "vcs",
-      "url": "https://github.com/creativecommons/queulat"
     }
   ],
   "require": {
