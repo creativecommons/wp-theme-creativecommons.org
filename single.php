@@ -12,7 +12,7 @@
 						yoast_breadcrumb( '<p id="breadcrumbs">', '</p>' );
 					}
 				?>
-				<div class="is-mobile cc-post-parent">
+				<div class="is-flex-mobile cc-post-parent">
 
 					<div class="cc-post-heading is-vcentered column">
 						<h2><?php the_title(); ?></h2>
