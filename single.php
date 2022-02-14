@@ -7,11 +7,6 @@
 		<div class="container">
 			<div class="columns is-centered">
 				<div class="column">
-				<?php
-					if ( function_exists( 'yoast_breadcrumb' ) ) {
-						yoast_breadcrumb( '<p id="breadcrumbs">', '</p>' );
-					}
-				?>
 				<div class="is-flex-mobile cc-post-parent">
 
 					<div class="cc-post-heading is-vcentered column">
