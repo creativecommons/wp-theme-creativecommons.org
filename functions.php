@@ -2,7 +2,7 @@
 /**
  * Functions: list
  *
- * @version 2022.02.1
+ * @version 2022.02.2
  * @package wp-theme-creativecommons.org
  */
 
