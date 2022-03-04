@@ -27,7 +27,7 @@
   ],
   "require": {
     "composer/installers": "~1.0",
-    "creativecommons/creativecommons-base": "2022.03.1"
+    "creativecommons/creativecommons-base": "2022.03.2"
   },
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
